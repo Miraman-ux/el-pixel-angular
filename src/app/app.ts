@@ -3,9 +3,9 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css', './text.css', './border.css'],
 })
 export class App {
   protected readonly title = signal('el-pixel-angular');
