@@ -102,11 +102,10 @@ export class AppComponent {
 
 <img src="test.png" alt = "picture" #myImg>
 
-
-<!--№1 Дан инпут. Запишите данные его свойство value.-->
-
 <div>
   {{myImg.src}}
 </div>
 
-<input [value]="text">
+
+<!--№1 Дан инпут. Запишите данные его свойство value.-->
+<input type = "text" [(ngModel)]="value" )]>

@@ -1,9 +1,10 @@
 import { asNativeElements, Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-root',
-    imports: [],
+    imports: [FormsModule],
     templateUrl: './app.html',
     styleUrls: ['./app.css', './text.css', './border.css'],
 })
@@ -34,7 +35,7 @@ export class App {
         return 'smit';
     }
 
-    public text: string = 'abcde';
+    public value: string = 'abcde';
 
     protected readonly title = signal('el-pixel-angular');
     protected readonly Math = Math;
