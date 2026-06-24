@@ -6,106 +6,12 @@
   <h2>Привет</h2>
 </div>
 
-<!-- №1 С помощью интерполяции выведите произведение двух чисел.-->
-<div>
-  {{ 5 * 9}}
-</div>
+<nav style="padding: 10px; background: #eee; margin-bottom: 20px;">
+  <a routerLink="/" style="margin-right: 15px;">Главная</a>
 
-<!-- №2 С помощью интерполяции округлите дробь до заданного знака в дробной части.-->
-<div>
-  {{Math.floor(5.6789 * 100) / 100}}
-</div>
+  <a routerLink="/template" style="margin-right: 15px;">Вкладка: Темплейты</a>
 
-<!-- №1 Дана следующая верстка:
-<ul>
-	<li>name: john</li>
-	<li>surn: smit</li>
-</ul>
-Сделайте так, чтобы имя и фамилия передавались в темплейт из класса компонента.-->
+  <a routerLink="/directives">Вкладка: Директивы</a>
+</nav>
 
-<ul>
-  <li>{{name}}</li>
-  <li>{{surn}}</li>
-</ul>
-
-<!--№1 Дана следующая верстка:
-
-<img src="test.png" alt="picture">
-Сделайте так, чтобы содержимое атрибутов передавалось из класса компонента. -->
-
-<img src ="{{imgUrl}}" alt="{{imgAlt}}">
-
-<!--№1 Дан следующий массив:
-
-export class AppComponent {
-	public arr: number[] = [1, 2, 3, 4, 5];
-}
-Выведите каждый элемент этого массива в отдельном абзаце. -->
-
-<div>
-  <p>{{arr[0]}}</p>
-  <p>{{arr[1]}}</p>
-  <p>{{arr[2]}}</p>
-  <p>{{arr[3]}}</p>
-  <p>{{arr[4]}}</p>
-</div>
-
-<!--№1 Дан следующий объект:
-
-export class AppComponent {
-	public user = {
-		name: 'john',
-		surn: 'smit',
-	};
-}
-Выведите каждый элемент этого объекта в отдельном абзаце. -->
-
-<div>
-  <p>{{user.name}}</p>
-  <p>{{user.surn}}</p>
-</div>
-
-<!--№2 Дан следующий объект:
-
-export class AppComponent {
-	public user = {
-		img: 'pic.png',
-		alt: 'picture',
-	};
-}
-Выведите элементы этого объекта в виде следующей верстки:
-
-<img src="pic.png" alt="picture"> -->
-
-<img src="{{user1.img}}" alt="{{user1.alt}}">
-
-<!--№1 Пусть в классе компонента есть следующие методы:
-
-export class AppComponent {
-	public showName() {
-		return 'john';
-	}
-
-	public showSurn() {
-		return 'smit';
-	}
-}
-Выведите имя и фамилию в файле темплейта компонента. -->
-
-<div>
-  {{showName()}}
-  {{showSurn()}}
-</div>
-
-<!--№1 Дан див. Дана картинка. Запишите ссылку на картинку в шаблонную переменную.
-Выведите src нашей картинки внутри дива. -->
-
-<img src="test.png" alt = "picture" #myImg>
-
-<div>
-  {{myImg.src}}
-</div>
-
-
-<!--№1 Дан инпут. Запишите данные его свойство value.-->
-<input type = "text" [(ngModel)]="value" )]>
+<router-outlet></router-outlet>
