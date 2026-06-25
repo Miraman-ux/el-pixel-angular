@@ -6,7 +6,7 @@ import { HousingLocation } from './housing-location/housing-location';
 
 @Component({
     selector: 'app-root',
-    imports: [FormsModule, Home, HousingLocation, RouterOutlet, RouterLink],
+    imports: [FormsModule, Home, RouterOutlet, RouterLink],
     templateUrl: './app.html',
     styleUrls: ['./app.css', './text.css', './border.css'],
 })

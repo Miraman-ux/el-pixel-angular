@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { NgFor } from '@angular/common';
+import { NgStyle } from '@angular/common';
 
 @Component({
     selector: 'app-directives',
     templateUrl: './directives.component.html',
     styleUrls: ['./directives.component.css'],
-    imports: [NgIf, NgFor],
+    imports: [NgIf, NgFor, NgStyle],
 })
 export class DirectivesComponent {
     public isAdult: boolean = true;

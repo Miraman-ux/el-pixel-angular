@@ -128,13 +128,13 @@ export class AppComponent {
 }
 Выведите элементы массива в виде списка ul, покрасив первую li в красный цвет, а последнюю - в зеленый.-->
 
-<!--<ul>
+<ul>
   @for (elem of strArr; track $index; let isFirst = $first; let isLast = $last) {
-    <li [style.color]="isFirst ? 'red' : (isLast ? 'green' : null)">
+    <li [ngStyle]="{'color': isFirst ? 'red' : (isLast ? 'green' : null)}">
       {{ elem }}
     </li>
   }
-</ul>-->
+</ul>
 
 
 <!--Дан массив:
@@ -147,7 +147,7 @@ export class AppComponent {
 
 <ul>
   @for (elem of strArr; track $index; let isEven = $even; let isOdd = $odd){
-    <li [style.color]="isEven ? 'green': (isOdd ? 'red' : null)">
+    <li [ngStyle]="{'color': isEven ? 'green': (isOdd ? 'red' : null)}">
       {{elem}}
     </li>
   }
